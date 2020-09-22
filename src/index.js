@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ChatRoom from './Components/chatroom';
 
 /*Element to be rendered*/
-let element = <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+let element = <BrowserRouter basename={process.env.PUBLIC_URL}>
               <main>
                 <Switch>
                   <Route path="/" component={Loginform} exact />
