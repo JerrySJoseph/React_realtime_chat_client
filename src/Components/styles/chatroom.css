@@ -1,0 +1,184 @@
+.form-chat{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    position: fixed;
+    min-width: 80%;
+    min-height: 80%;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 16px 53px 0px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+.online-form{
+    display: flex;
+    flex-direction: column;
+    background-color:#f9f9f9;
+    width: 30%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+.online-formNavContainer{
+    display: flex;
+    flex-direction: row;
+    background-color:#f9f9f9;
+    border-top-left-radius: 20px;
+    padding:.5rem;
+    color: #4849A1;
+    text-align: center;
+    height: 50px;
+}
+.online-formList{
+    display: flex;
+    flex-direction: column;
+}
+.online-formCard{
+    display: flex;
+    flex-direction: row;
+    padding:5px;
+    align-items: center;
+  
+}
+.online-listitem{
+   align-items: center;
+}
+.online-listitem :hover{
+    background-color: #f9e6e8;
+}
+.online-listitem h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+.usercard{
+    background-color: grey;
+}
+.online-formCard h2{
+    font-style: italic;
+}
+.chatbox{
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    width: 70%;
+}
+.chatbox-formNavContainer{
+    display: flex;
+    flex-direction: row;
+    background-color:#4849A1;
+    border-top-right-radius: 20px;
+    padding:.5rem;
+    color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.chatbox .chatbox-inner{
+    position: relative;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.message-list{
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    text-align:justify; 
+    max-height: 400px; 
+}
+.navbutton{
+    color: white !important;
+    width: 40px;
+    height: 40px;
+}
+.message-list ul { 
+    margin:4px, 4px; 
+    padding:4px; 
+    display: flex;
+    flex-direction: column;
+} 
+    
+.input-container{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    left:0;
+    align-items: stretch;
+    display: flex;
+    height: 10%;
+    width: 95%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+.input-container .MuiIconButton-root{
+    background-color: #4849A1 !important;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.3);
+    color: white !important;
+}
+.input-container .MuiTextField-root{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:10px;
+    width: 85%;
+    height: 40px;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+}
+.admin-container{
+    display: flex;
+    flex-direction: column;
+    padding:10px ;
+    margin:10px;
+    text-align: center;
+    align-items: center;
+}
+.admin-message{
+    padding:10px ;
+    margin:10px;
+    width: fit-content;   
+    position: relative;
+    background-color: #f9e6e8;
+    border-radius: 10px;
+    
+}
+.message-container{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    padding:10px ;
+    margin:10px;
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.send{
+    float: right;
+    background-color: #4849A1;
+    color:white;
+}
+.send a{
+    float: right;
+}
+.recieve{
+    float: left;
+    background-color: #f9f9f9;
+}
+.recieve a{
+    float: left;
+}
+.message-details{
+    display: flex;
+    width: fit-content;
+    margin:5px;
+    font-style: italic;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    font-size: 10px;
+
+}
