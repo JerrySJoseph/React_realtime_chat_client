@@ -62,7 +62,7 @@ export default function LoginForm() {
                 autoFocus
                 onChange={(event)=>setRoom(event.target.value)}
             />
-            <Link href={`/chat?name=${name}&rid=${room}`}>
+            <Link href={process.env.PUBLIC_URL+`/chat?name=${name}&rid=${room}`}>
 
             <Button
                 type="submit"
