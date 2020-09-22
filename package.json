@@ -2,7 +2,7 @@
   "name": "realtime_chat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jerrysjoseph.github.io/React_RealtimeChat",
+  "homepage": "https://jerrysjoseph.github.io/React_realtime_chat_client",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
