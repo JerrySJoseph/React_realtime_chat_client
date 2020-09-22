@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState, useRef } from 'react';
 import './styles/chatroom.css'
 import { makeStyles } from '@material-ui/core/styles';
 import querystring from 'query-string';
-import io from 'socket.io'
+import io from 'socket.io-client'
 import Avatar from '@material-ui/core/Avatar';
 import { TextField, IconButton } from '@material-ui/core'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
