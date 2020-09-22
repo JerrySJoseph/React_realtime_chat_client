@@ -196,11 +196,11 @@ export class ChatBox extends Component {
 
         return <div className='chatbox'>
             <div className="chatbox-formNavContainer">
-                <IconButton href="/" className="navbutton back" >
+                <IconButton href={process.env.PUBLIC_URL+`/`} className="navbutton back" >
                     <ArrowBackIcon />
                 </IconButton>
                 <h1>Room: {this.state.room}</h1>
-                <IconButton href="/" className="navbutton logout"  >
+                <IconButton href={process.env.PUBLIC_URL+`/`} className="navbutton logout"  >
                     <ExitToAppIcon />
                 </IconButton>
             </div>
