@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React_realtime_chat_client/static/css/main.b3f5e763.chunk.css",
-    "main.js": "/React_realtime_chat_client/static/js/main.65a7ed29.chunk.js",
-    "main.js.map": "/React_realtime_chat_client/static/js/main.65a7ed29.chunk.js.map",
+    "main.js": "/React_realtime_chat_client/static/js/main.9a87ba1e.chunk.js",
+    "main.js.map": "/React_realtime_chat_client/static/js/main.9a87ba1e.chunk.js.map",
     "runtime-main.js": "/React_realtime_chat_client/static/js/runtime-main.bf9aa72f.js",
     "runtime-main.js.map": "/React_realtime_chat_client/static/js/runtime-main.bf9aa72f.js.map",
     "static/js/2.fb9ad51d.chunk.js": "/React_realtime_chat_client/static/js/2.fb9ad51d.chunk.js",
     "static/js/2.fb9ad51d.chunk.js.map": "/React_realtime_chat_client/static/js/2.fb9ad51d.chunk.js.map",
     "index.html": "/React_realtime_chat_client/index.html",
-    "precache-manifest.32bd6cbff2435ab022cc2692b54ae057.js": "/React_realtime_chat_client/precache-manifest.32bd6cbff2435ab022cc2692b54ae057.js",
+    "precache-manifest.283c780f6798fe414b6498b67e7195c4.js": "/React_realtime_chat_client/precache-manifest.283c780f6798fe414b6498b67e7195c4.js",
     "service-worker.js": "/React_realtime_chat_client/service-worker.js",
     "static/css/main.b3f5e763.chunk.css.map": "/React_realtime_chat_client/static/css/main.b3f5e763.chunk.css.map",
     "static/js/2.fb9ad51d.chunk.js.LICENSE.txt": "/React_realtime_chat_client/static/js/2.fb9ad51d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bf9aa72f.js",
     "static/js/2.fb9ad51d.chunk.js",
     "static/css/main.b3f5e763.chunk.css",
-    "static/js/main.65a7ed29.chunk.js"
+    "static/js/main.9a87ba1e.chunk.js"
   ]
 }
