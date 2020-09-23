@@ -1,4 +1,4 @@
-# Realtime Chat Server Client
+# Realtime Chat Client
 This is an open-source project for implementing realtime chat application in any platform using Websockets. It implements Websocket via Socket.io library. An instance of its server is hosted in the cloud for demonstration. This server facilitates mutltiple rooms supervised by server. Each user needs to enter username and room id the join the room. Joining the session is done by initialising a socket at this server's ENDPOINT.
 
 The client application in fully developed using React framework. This project explains how to implement the Client side of Chat Application.
