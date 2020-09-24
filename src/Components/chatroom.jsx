@@ -9,7 +9,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import SendIcon from '@material-ui/icons/Send';
 
-const ENDPOINT = 'https://realtimechat-server1.herokuapp.com/';
+const ENDPOINT ='http://localhost:5000/' /*'https://realtimechat-server1.herokuapp.com/'*/;
 let socket = io(ENDPOINT);
 
 const useStyles = makeStyles((theme) => ({
@@ -42,14 +42,15 @@ export default function ChatRoom({ location }) {
         setRoom(rid);
         setName(name);
         console.log(socket);
-        socket.emit('join', { name, rid }, ({ error }) => {
-            alert(error);
-        });
+        
         socket.on('reconnect', () => {
-            socket.emit('join', { name, rid }, ({ error }) => {
-                alert(error);
-            });
+            socket.emit('join', { name, rid });
         })
+        socket.on('error-join', ({ error }) => {
+            alert(error);
+
+        })
+        socket.emit('join', { name, rid });
         return () => {
             socket.emit('disconnect');
             socket.off();
@@ -151,13 +152,14 @@ export class ChatBox extends Component {
 
         console.log("Sending message " + newmes)
         if (newmes) {
-            socket.emit('sendMessage', socket.id, this.state.room, newmes, ({ status }) => {
+           
+            socket.on('sendMessage-response',({ status }) => {
                 if (status !== "success")
                     alert(status);
 
                 this.setState({ message: '' })
-            });
-
+            })
+            socket.emit('sendMessage', socket.id, this.state.room, newmes);
 
         }
     }
