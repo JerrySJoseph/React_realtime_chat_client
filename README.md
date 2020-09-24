@@ -1,71 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Realtime Chat Client
+This is an open-source project for implementing realtime chat application in any platform using Websockets. It implements Websocket via Socket.io library. An instance of its server is hosted in the cloud for demonstration. This server facilitates mutltiple rooms supervised by server. Each user needs to enter username and room id the join the room. Joining the session is done by initialising a socket at this server's ENDPOINT.
 
-## Available Scripts
+The client application in fully developed using React framework. This project explains how to implement the Client side of Chat Application.
 
-In the project directory, you can run:
+# Demo
+A demo of the client app is hosted on 
+https://jerrysjoseph.github.io/React_realtime_chat_client/
 
-### `npm start`
+# EVENTS
+Getting online Users
+```javascript
+ socket.on('users', ({ online }) => {
+           //A destructured object named online is used to fetch list of online users;
+           users=[];
+           users.concat(online);
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+        })
+```
+Recieving messages
+```javascript
+  socket.on('message', ({ message, room, from }) => {
+            //display the recieved message in console
+            console.log(from + ":" + message + " in " + room);
+            
+        })
+```
+Send Messages
+```javascript
+ sendMessage(newmes) {
+        console.log("Sending message " + newmes)
+        if (newmsg) {
+            socket.emit('sendMessage', socket.id, room, newmes, ({ status }) => {
+                //A status is recieved as callback from server if message is delivered successfully
+                if (status !== "success")
+                    alert(status);
+                    //TODO: Clear input
+            });
+        }
+    }
+```
+## About 
+This project is developed by Jerry S Joseph as a demostration of WebSockets via socket.io. This application is developed in React.js and hosted in githhub pages.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Server Endpoint
 
-### `npm test`
+Visit this link to check if the hosted server is running...
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://realtimechat-server1.herokuapp.com/
 
-### `npm run build`
+License
+-------
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Copyright 2014 - 2021 Jerin Sebastian
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        http://www.apache.org/licenses/LICENSE-2.0
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# React_RealtimChat_Client
-# React_RealtimChat_Client
-# React_RealtimeChat_Client
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
