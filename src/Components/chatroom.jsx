@@ -9,7 +9,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import SendIcon from '@material-ui/icons/Send';
 
-const ENDPOINT ='http://localhost:5000/' /*'https://realtimechat-server1.herokuapp.com/'*/;
+const ENDPOINT ='https://realtimechat-server1.herokuapp.com/';
 let socket = io(ENDPOINT);
 
 const useStyles = makeStyles((theme) => ({
